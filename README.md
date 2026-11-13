@@ -50,7 +50,7 @@ DevOps & Tooling  : Docker, Docker Compose, CMake, GCC/Clang, Git, Linux (Ubuntu
 
 | # | Proyecto | Enfoque Principal | Stack Tecnológico | Repositorio |
 | :-: | :--- | :--- | :--- | :-: |
-| **01** | [Sistema Empresarial de Reclamos Médicos](01_Tesis_Enterprise_System_Centrosur/) | Arquitectura Empresarial & Integración Legacy | NestJS, Ionic/Angular, IBM DB2, AS400, PostgreSQL, Pepeluz AI | [Ver Documentación](01_Tesis_Enterprise_System_Centrosur/README.md) |
+| **01** | [Sistema Empresarial de Reclamos Médicos](01_Enterprise_System_Centrosur/) | Arquitectura Empresarial & Integración Legacy | NestJS, Ionic/Angular, IBM DB2, AS400, PostgreSQL, Pepeluz AI | [Ver Documentación](01_Enterprise_System_Centrosur/README.md) |
 | **02** | [Security Monitor Based on Computer Vision](02_Security_Monitor_Computer_Vision/) | Visión Artificial Híbrida & Sistemas C++ | C++17, OpenCV 4, Hard Negative Mining, PyTorch, Telegram API | [GitHub](https://github.com/David5Uzhca/Security_Monitor_Based_on_Computer_Vision) |
 | **03** | [UPSGlam: GPU Accelerated Platform](03_GPU_Heterogeneous_Platform_UPSGlam/) | Cómputo Heterogéneo GPU & Microservicios | CUDA, PyCUDA, FastAPI, Java 17 (Spring Boot), Flutter, Docker | [GitHub](https://github.com/David5Uzhca/UPS-GLAM) |
 | **04** | [NovaShop: Agentic Conversational AI](04_Agentic_AI_Shopping_Assistant/) | Agentes Inteligentes con LLM & Full-Stack | Google Gemini, FastAPI, GraphQL (Strawberry), React 18, TS | [GitHub](https://github.com/David5Uzhca/ai_shopping_assistant) |
