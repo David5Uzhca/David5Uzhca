@@ -1,0 +1,172 @@
+%==============================================================================
+% JUAN DAVID UZHCA CAJAMARCA | SOFTWARE ENGINEER
+% Master Professional CV | 100% ATS-Compliant (1 Page Strict)
+% Compilador: pdfLaTeX / XeLaTeX
+%==============================================================================
+
+\documentclass[9.5pt, letterpaper]{article}
+
+% --- Paquetes Fundamentales ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{microtype}
+
+% --- Geometría y Márgenes Calibrados para 1 Página Completa ---
+\geometry{
+    top=0.45in,
+    bottom=0.45in,
+    left=0.55in,
+    right=0.55in
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\pagestyle{empty}
+\renewcommand{\familydefault}{\sfdefault}
+
+% --- Paleta de Colores de Alta Fidelidad ---
+\definecolor{navy}{HTML}{0F2A4A}       % Azul institucional oscuro
+\definecolor{blueaccent}{HTML}{1D4ED8} % Azul técnico para enlaces y reglas
+\definecolor{darktext}{HTML}{1E293B}   % Gris grafito oscuro (legibilidad óptima)
+\definecolor{muted}{HTML}{475569}      % Gris medio para metadatos/subtítulos
+
+\color{darktext}
+
+% --- Configuración de Hipervínculos ---
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blueaccent,
+    linkcolor=navy,
+    pdftitle={CV - Juan David Uzhca - Software Engineer},
+    pdfauthor={Juan David Uzhca Cajamarca}
+}
+
+% --- Títulos de Sección (Sin cajas, compatible con OCR/ATS) ---
+\titleformat{\section}
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{navy}\uppercase}
+    {}
+    {0em}
+    {}
+    [\vspace{-2pt}{\color{blueaccent}\titlerule[1pt]}]
+
+\titlespacing*{\section}{0pt}{4pt}{2.5pt}
+
+% --- Listas Compactas sin sangría excesiva ---
+\setlist[itemize]{
+    noitemsep,
+    topsep=1pt,
+    partopsep=0pt,
+    parsep=0.5pt,
+    leftmargin=10pt,
+    label={\color{blueaccent}\small$\bullet$}
+}
+
+\begin{document}
+
+% --- ENCABEZADO MINIMALISTA Y ELEGANTE (Apto para escaneo ATS e impresión B/N) ---
+\begin{center}
+    {\fontsize{19}{22}\selectfont \textbf{\color{navy} JUAN DAVID UZHCA CAJAMARCA}}\\[2pt]
+    {\fontsize{10.5}{12}\selectfont \textbf{Ingeniero en Ciencias de la Computación \textbar\ Software Engineer}}\\[2.5pt]
+    \footnotesize
+    Cuenca, Ecuador \textbar\ Open to Remote \textbar\ 
+    \textbf{(+593) 99 851 8609} \textbar\ 
+    \href{mailto:juandaviduzhca@hotmail.com}{juandaviduzhca@hotmail.com} \textbar\ 
+    \href{https://linkedin.com/in/david-uzhca-5b5439442}{linkedin.com/in/david-uzhca-5b5439442} \textbar\ 
+    \href{https://github.com/David5Uzhca}{github.com/David5Uzhca}
+\end{center}
+
+\vspace{-4pt}
+
+% --- PERFIL PROFESIONAL ---
+\section{Perfil Profesional}
+\footnotesize
+Ingeniero en Ciencias de la Computación enfocado en desarrollo \textbf{Full-Stack}, visión por computadora de alto rendimiento y arquitecturas concurrentes. Experiencia demostrada en el diseño e implementación de sistemas empresariales escalables (NestJS, Ionic/Angular) integrados a infraestructuras legacy (\textbf{IBM DB2 / AS400}), pipelines de visión acelerados por hardware (\textbf{C++17, OpenCV, CUDA 3.18x}) y agentes autónomos asistidos por IA (Google Gemini, FastAPI). Orientado a código limpio, modularidad y métricas medibles de rendimiento.
+
+% --- HABILIDADES TÉCNICAS ---
+\section{Habilidades Técnicas}
+\footnotesize
+\textbf{Lenguajes Core:} TypeScript, Python, C++17, Java (Spring Boot), SQL, C\#, Dart, JavaScript, HTML5/SCSS.\\
+\textbf{Backend \& Arquitectura:} NestJS, FastAPI, Spring Boot, RESTful APIs, GraphQL (Strawberry), Microservicios, Node.js.\\
+\textbf{Frontend \& Móvil:} Angular, Ionic Framework, React 18, Vite, Flutter, TailwindCSS, SCSS, RxJS.\\
+\textbf{Visión por Computador \& IA:} OpenCV 4.x, CUDA / PyCUDA, PyTorch (Keypoint R-CNN), HOG + SVM, Google Gemini (Function Calling).\\
+\textbf{Sistemas \& Concurrencia:} MPI (mpi4py), SPMD, Multithreading, Asynchronous I/O, IPC, Linux (Ubuntu/Kubuntu).\\
+\textbf{Bases de Datos \& DevOps:} PostgreSQL, IBM DB2, AS400, Supabase, Git, Docker, Docker Compose, CMake, Postman.
+
+% --- EXPERIENCIA Y PROYECTOS DESTACADOS ---
+\section{Experiencia y Proyectos Destacados}
+
+% PROYECTO 1: TESIS CENTROSUR
+\noindent
+\textbf{Sistema Empresarial de Reclamos Médicos} \textbar\ \textit{Lead Architect \& Full-Stack Developer} \hfill \textbf{2025 -- 2026}\\
+\textit{Empresa Eléctrica Regional Centro Sur C.A. / Universidad Politécnica Salesiana} \hfill \textit{Cuenca, Ecuador}\\
+\footnotesize\textbf{Stack:} NestJS, TypeScript, Ionic, Angular, IBM DB2, AS400, PostgreSQL, JWT, Chatbot IA Pepeluz
+\begin{itemize}
+    \item Diseñó e implementó una solución empresarial integral para la gestión y auditoría de reclamos médicos, reduciendo los tiempos de consulta administrativa mediante flujos automatizados de extremo a extremo.
+    \item Desarrolló un backend modular desacoplado en \textbf{NestJS}, implementando autenticación JWT, RBAC y conectores optimizados hacia bases de datos transaccionales de nómina \textbf{IBM DB2 / AS400} y PostgreSQL.
+    \item Construyó aplicaciones web y móviles multiplataforma en \textbf{Ionic / Angular} e integró el chatbot inteligente \textbf{"Pepeluz"} asistido por IA para consultas dinámicas de pólizas y expedientes en tiempo real.
+\end{itemize}
+
+\vspace{2.5pt}
+
+% PROYECTO 2: SECURITY MONITOR
+\noindent
+\textbf{Security Monitor: Plataforma Híbrida de Vigilancia} \textbar\ \textit{Systems \& Computer Vision Engineer} \hfill \href{https://github.com/David5Uzhca/Security_Monitor_Based_on_Computer_Vision}{\textbf{[GitHub]}}\\
+\textit{C++17, OpenCV 4.x, Hard Negative Mining, PyTorch (Keypoint R-CNN), CMake, Flask, Telegram Bot API} \hfill \textbf{2025 -- 2026}
+\begin{itemize}
+    \item Diseñó una arquitectura híbrida desacoplando la detección en tiempo real a alta velocidad en \textbf{C++17} del análisis semántico en \textbf{Python}, optimizando el descriptor \textbf{HOG + Linear SVM} con \textit{Hard Negative Mining} para mitigar falsos positivos.
+    \item Minimizó la huella de memoria residente (RSS) mediante monitoreo nativo en el kernel Linux e implementó un buffer circular con comunicación IPC asíncrona hacia \textbf{PyTorch} para detección de caídas y despacho de alertas vía Telegram Bot.
+\end{itemize}
+
+\vspace{2.5pt}
+
+% PROYECTO 3: UPS-GLAM
+\noindent
+\textbf{UPS-Glam: Plataforma Heterogénea con Aceleración GPU} \textbar\ \textit{Software Architect \& GPU Developer} \hfill \href{https://github.com/David5Uzhca/UPS-GLAM}{\textbf{[GitHub]}}\\
+\textit{CUDA, PyCUDA, Python (FastAPI), Java 17 (Spring Boot), Flutter, Docker Compose, Supabase} \hfill \textbf{2025 -- 2026}
+\begin{itemize}
+    \item Implementó pipelines de convolución 2D de alta resolución acelerados mediante \textbf{kernels CUDA personalizados} en \textbf{PyCUDA}, optimizando transferencias host-to-device y alcanzando un incremento de velocidad de procesamiento de hasta \textbf{3.18x a 12x}.
+    \item Arquitectó un microservicio en \textbf{FastAPI} con contexto CUDA dedicado en thread pool uniproceso para evitar fallos de concurrencia, integrando un backend transaccional en \textbf{Spring Boot} y una app cliente en \textbf{Flutter}.
+\end{itemize}
+
+\vspace{2.5pt}
+
+% PROYECTO 4: NOVASHOP
+\noindent
+\textbf{NovaShop: Asistente Conversacional Multimodal con IA} \textbar\ \textit{Full-Stack \& GenAI Engineer} \hfill \href{https://github.com/David5Uzhca/ai_shopping_assistant}{\textbf{[GitHub]}}\\
+\textit{Google Gemini API (Function Calling), FastAPI, GraphQL (Strawberry), React 18, TypeScript, ElevenLabs} \hfill \textbf{2025 -- 2026}
+\begin{itemize}
+    \item Construyó un agente autónomo de comercio electrónico usando \textbf{Google Gemini} con \textit{Tool / Function Calling} estricto para búsqueda de inventario y gestión de carritos sin alucinaciones, integrando síntesis de voz fotorrealista con \textbf{ElevenLabs}.
+    \item Desarrolló una API Gateway híbrida en \textbf{FastAPI} con esquemas tipados \textbf{GraphQL} y persistencia transaccional en PostgreSQL.
+\end{itemize}
+
+\vspace{2.5pt}
+
+% PROYECTO 5: SISTEMA DISTRIBUIDO AMBIENTAL
+\noindent
+\textbf{Sistema Distribuido de Monitoreo Ambiental} \textbar\ \textit{Concurrent Computing Engineer} \hfill \href{https://github.com/David5Uzhca/Sistema-de-Monitoreo-Ambiental-Concurrente}{\textbf{[GitHub]}}\\
+\textit{Computación Paralela (MPI / mpi4py), Modelo SPMD, Python, PyQt6, Benchmarking} \hfill \textbf{2025}
+\begin{itemize}
+    \item Implementó una simulación paralela en clúster bajo el modelo \textbf{SPMD} con \textbf{mpi4py}, empleando operaciones colectivas (\textit{Scatter, Broadcast, Reduce, Barrier}) y evaluando la aceleración (\textit{Speedup}) y eficiencia conforme a la Ley de Amdahl con telemetría en \textbf{PyQt6}.
+\end{itemize}
+
+% --- EDUCACIÓN Y CERTIFICACIONES ---
+\section{Educación y Certificaciones}
+\noindent
+\textbf{Ingeniería en Ciencias de la Computación} \textbar\ Universidad Politécnica Salesiana \hfill \textit{Cuenca, Ecuador \textbar\ Egreso: 2026}\\
+\vspace{-2pt}
+\begin{itemize}
+    \item \textbf{Build, Train, and Deploy ML Models with Keras on Google Cloud} \textbar\ \textit{Google Cloud / Google Skills Boost} \hfill \textbf{Dic. 2025}\\
+    Credencial oficial en arquitectura, entrenamiento y despliegue de modelos de Machine Learning en infraestructura cloud empresarial.
+    \item \textbf{Certificate of Recognition: Graduation Project in English} \textbar\ \textit{Universidad Politécnica Salesiana} \hfill \textbf{Ago. 2026}\\
+    Distinción académica otorgada por la defensa y sustentación del Proyecto de Titulación íntegramente en idioma inglés.
+\end{itemize}
+
+\end{document}

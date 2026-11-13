@@ -1,0 +1,429 @@
+%==============================================================================
+% DAVID UZHCA | SOFTWARE ENGINEER
+% Modern Professional CV | ATS-Friendly
+% Compiler: pdfLaTeX
+%==============================================================================
+
+\documentclass[10pt,a4paper]{article}
+
+%------------------------------------------------------------------------------
+% PACKAGES
+%------------------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+%------------------------------------------------------------------------------
+% PAGE CONFIGURATION
+%------------------------------------------------------------------------------
+\geometry{
+    top=0.62in,
+    bottom=0.62in,
+    left=0.72in,
+    right=0.72in
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.2}
+
+\pagestyle{empty}
+\renewcommand{\familydefault}{\sfdefault}
+
+%------------------------------------------------------------------------------
+% COLOR PALETTE
+%------------------------------------------------------------------------------
+\definecolor{navy}{HTML}{142B4A}
+\definecolor{blue}{HTML}{2563EB}
+\definecolor{lightblue}{HTML}{EAF1FC}
+\definecolor{darktext}{HTML}{263445}
+\definecolor{muted}{HTML}{64748B}
+\definecolor{linecolor}{HTML}{DCE4EE}
+\definecolor{cardbg}{HTML}{F6F8FB}
+\definecolor{white}{HTML}{FFFFFF}
+
+\color{darktext}
+
+%------------------------------------------------------------------------------
+% HYPERLINKS
+%------------------------------------------------------------------------------
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=navy,
+    pdftitle={David Uzhca | Software Engineer},
+    pdfauthor={David Uzhca},
+    pdfsubject={Curriculum Vitae}
+}
+
+%------------------------------------------------------------------------------
+% SECTION DESIGN
+%------------------------------------------------------------------------------
+\titleformat{\section}
+    {\large\bfseries\color{navy}}
+    {}
+    {0pt}
+    {\MakeUppercase}
+    [\vspace{-3pt}{\color{blue}\titlerule[1.2pt]}]
+
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+%------------------------------------------------------------------------------
+% LIST DESIGN
+%------------------------------------------------------------------------------
+\setlist[itemize]{
+    leftmargin=14pt,
+    itemsep=2pt,
+    topsep=3pt,
+    parsep=0pt,
+    partopsep=0pt,
+    label=\textcolor{blue}{\small$\bullet$}
+}
+
+%------------------------------------------------------------------------------
+% HEADER DESIGN
+%------------------------------------------------------------------------------
+\newtcolorbox{headerbox}{
+    enhanced,
+    colback=navy,
+    colframe=navy,
+    boxrule=0pt,
+    arc=3mm,
+    left=7mm,
+    right=7mm,
+    top=6mm,
+    bottom=6mm,
+    width=\textwidth
+}
+
+%------------------------------------------------------------------------------
+% PROJECT DESIGN
+%------------------------------------------------------------------------------
+\newenvironment{project}[5]{
+    \begin{tcolorbox}[
+        enhanced,
+        colback=cardbg,
+        colframe=linecolor,
+        boxrule=0.5pt,
+        arc=2mm,
+        left=3mm,
+        right=3mm,
+        top=2.5mm,
+        bottom=2mm,
+        before skip=5pt,
+        after skip=5pt,
+        breakable
+    ]
+
+    {\normalsize\bfseries\color{navy} #1}
+    \hfill
+    {\small\bfseries\color{blue} #3}
+
+    \vspace{1pt}
+
+    {\small\itshape\color{darktext} #2}
+    \hfill
+    {\small #4}
+
+    \vspace{3pt}
+
+    {\footnotesize\color{muted}\textbf{STACK:} #5}
+
+    \vspace{2pt}
+    \small
+    \begin{itemize}
+}{
+    \end{itemize}
+    \end{tcolorbox}
+}
+
+%------------------------------------------------------------------------------
+% SKILL ROW
+%------------------------------------------------------------------------------
+\newcommand{\skillrow}[2]{
+    \textbf{\color{navy}#1} &
+    {\small #2}\\[4pt]
+}
+
+%==============================================================================
+% DOCUMENT
+%==============================================================================
+\begin{document}
+
+%------------------------------------------------------------------------------
+% PROFESSIONAL HEADER
+%------------------------------------------------------------------------------
+\begin{headerbox}
+    \centering
+
+    {\fontsize{27}{30}\selectfont
+    \bfseries\color{white} Juan David Uzhca Cajamarca}
+
+    \vspace{3pt}
+
+    {\large\bfseries\color{white}
+    Ingeniero en Ciencias de la Computación}
+
+    \vspace{2pt}
+
+    {\normalsize\color{lightblue}
+    Software Engineer \textbar\ Full-Stack Developer
+    \textbar\ Computer Vision \& AI}
+
+    \vspace{9pt}
+
+    {\small\color{white}
+    Cuenca, Ecuador
+    \quad\textcolor{blue!50}{\textbullet}\quad
+    Open to Remote
+    \quad\textcolor{blue!50}{\textbullet}\quad
+    (+593) 99 851 8609}
+
+    \vspace{4pt}
+
+    {\small\color{white}
+    \href{mailto:juandaviduzhca@hotmail.com}
+    {\textcolor{white}{juandaviduzhca@hotmail.com}}
+    \quad\textcolor{blue!50}{\textbullet}\quad
+    \href{https://linkedin.com/in/david-uzhca-5b5439442}
+    {\textcolor{white}{LinkedIn}}
+    \quad\textcolor{blue!50}{\textbullet}\quad
+    \href{https://github.com/David5Uzhca}
+    {\textcolor{white}{GitHub}}}
+\end{headerbox}
+
+\vspace{3pt}
+
+%------------------------------------------------------------------------------
+% PROFESSIONAL PROFILE
+%------------------------------------------------------------------------------
+\section{Perfil Profesional}
+
+\justifying
+Ingeniero en Ciencias de la Computación con sólida especialización en desarrollo \textbf{Full-Stack} y sistemas distribuidos de alto rendimiento. Experiencia demostrable en el diseño de arquitecturas escalables, integración de bases de datos transaccionales legacy (IBM DB2 / AS400) con backends modernos en NestJS y FastAPI, y optimización de pipelines de visión artificial acelerados por GPU (CUDA). Orientado a la entrega de productos de software limpios, eficientes y medibles.
+
+%------------------------------------------------------------------------------
+% TECHNICAL SKILLS
+%------------------------------------------------------------------------------
+\section{Habilidades Técnicas}
+
+\begin{tabularx}{\textwidth}{
+    @{}
+    >{\raggedright\arraybackslash}p{0.26\textwidth}
+    X
+    @{}
+}
+\skillrow{Frontend \& Móvil}{
+    Angular, Ionic, React, Flutter, TypeScript, TailwindCSS, SCSS, HTML5.
+}
+\skillrow{Backend \& APIs}{
+    NestJS, FastAPI, Node.js, Spring Boot, RESTful APIs, GraphQL (Strawberry), Microservicios.
+}
+\skillrow{Bases de Datos}{
+    PostgreSQL, Supabase, IBM DB2, AS400, SQLite, Cloudinary.
+}
+\skillrow{Lenguajes Core}{
+    TypeScript, JavaScript, Python, C++17, Java, SQL, C\#, Dart.
+}
+\skillrow{IA \& Computación GPU}{
+    OpenCV, CUDA, PyCUDA, PyTorch, YOLO, Google Gemini API, Function Calling.
+}
+\skillrow{Sistemas \& DevOps}{
+    Git, Docker, Docker Compose, CMake, MSVC, Linux (Ubuntu / Kubuntu), Postman.
+}
+\end{tabularx}
+
+%------------------------------------------------------------------------------
+% PROFESSIONAL EXPERIENCE & PROJECTS
+%------------------------------------------------------------------------------
+\section{Experiencia y Proyectos Destacados}
+
+% PROJECT 1
+\begin{project}
+{Sistema Empresarial de Gestión de Reclamos Médicos}
+{Lead Architect \& Full-Stack Developer}
+{2025 -- 2026}
+{\textit{Centro Sur / Universidad Politécnica Salesiana}}
+{NestJS, TypeScript, Ionic, Angular, IBM DB2, AS400, PostgreSQL}
+    \item Diseñó e implementó una solución empresarial integral para la automatización y auditoría de reclamos médicos, reduciendo los tiempos de consulta administrativa.
+    \item Desarrolló un backend desacoplado bajo arquitectura modular en NestJS, implementando autenticación JWT, control de acceso basado en roles (RBAC) y conectores optimizados hacia bases de datos transaccionales IBM DB2 / AS400 y PostgreSQL.
+    \item Construyó aplicaciones web y móviles multiplataforma de alto rendimiento con Ionic y Angular para derechohabientes y auditores.
+    \item Integró el chatbot inteligente \textbf{Pepeluz}, asistido por IA para consultas dinámicas de pólizas y seguimiento de expedientes en tiempo real.
+\end{project}
+
+% PROJECT 2
+\begin{project}
+{Security Monitor: Plataforma Híbrida de Videovigilancia}
+{Systems Engineer \& Computer Vision Developer}
+{2025 -- 2026}
+{\href{https://github.com/David5Uzhca/Security_Monitor_Based_on_Computer_Vision}
+{\textcolor{blue}{GitHub Repository}}}
+{C++17, OpenCV 4, HOG, SVM, PyTorch, Flask, Telegram Bot API}
+    \item Diseñó una arquitectura híbrida de videovigilancia desacoplando la detección de objetos de alta velocidad en C++17 del análisis semántico en Python.
+    \item Optimizó la detección de siluetas en tiempo real mediante descriptores HOG + Linear SVM y Hard Negative Mining, logrando una reducción del consumo de memoria RSS y minimizando falsos positivos en entornos dinámicos.
+    \item Implementó un buffer de grabación circular y comunicación IPC asíncrona con un servidor PyTorch para estimación de postura corporal, detección de caídas e intrusiones con despacho automático de alertas multimedia.
+\end{project}
+
+% PROJECT 3
+\begin{project}
+{UPS-Glam: Plataforma Heterogénea con Aceleración GPU}
+{Software Architect \& GPU Developer}
+{2025 -- 2026}
+{\href{https://github.com/David5Uzhca/UPS-GLAM}
+{\textcolor{blue}{GitHub Repository}}}
+{CUDA, PyCUDA, FastAPI, Spring Boot, Flutter, Docker, Supabase}
+    \item Implementó pipelines de convolución 2D de alta resolución acelerados mediante kernels CUDA personalizados en PyCUDA, optimizando las transferencias host-to-device y logrando un \textbf{incremento de 3.18x en velocidad de procesamiento}.
+    \item Arquitectó un microservicio en FastAPI con contexto CUDA dedicado en thread pool uniproceso, garantizando alta estabilidad bajo concurrencia intensiva.
+    \item Desarrolló el ecosistema completo con backend en Spring Boot, app móvil en Flutter y despliegue orquestado mediante Docker y Supabase.
+\end{project}
+
+%------------------------------------------------------------------------------
+% PROJECT CONTINUATION
+%------------------------------------------------------------------------------
+\section{Proyectos Destacados (Continuación)}
+
+% PROJECT 4
+\begin{project}
+{NovaShop: Asistente Conversacional Multimodal con IA}
+{Full-Stack \& Generative AI Engineer}
+{2025 -- 2026}
+{\href{https://github.com/David5Uzhca/ai_shopping_assistant}
+{\textcolor{blue}{GitHub Repository}}}
+{Google Gemini API, FastAPI, GraphQL, React, TypeScript, ElevenLabs}
+    \item Construyó un agente de ventas interactivo con capacidades multimodales (voz/texto) utilizando Google Gemini y llamadas dinámicas a herramientas (\textit{Function Calling}) para orquestación de inventario y carritos con alta precisión en respuestas.
+    \item Desarrolló una API Gateway en FastAPI integrando esquemas GraphQL tipados con Strawberry y persistencia escalable en PostgreSQL.
+    \item Diseñó una interfaz web reactiva con React 18 y TypeScript, integrando síntesis de voz natural mediante ElevenLabs.
+\end{project}
+
+% PROJECT 5
+\begin{project}
+{Sistema Distribuido de Monitoreo Ambiental}
+{Concurrent Computing Engineer}
+{2025}
+{\href{https://github.com/David5Uzhca/Sistema-de-Monitoreo-Ambiental-Concurrente}
+{\textcolor{blue}{GitHub Repository}}}
+{Python, MPI, mpi4py, SPMD, PyQt6, Benchmarking}
+    \item Implementó una arquitectura distribuida bajo el modelo SPMD mediante mpi4py para la simulación y análisis paralelo de variables ambientales en clúster.
+    \item Aplicó operaciones colectivas de paso de mensajes (\textit{Scatter, Broadcast, Reduce}) para distribución eficiente de carga computacional.
+    \item Evaluó la escalabilidad midiendo métricas de aceleración (\textit{Speedup}) y eficiencia bajo la Ley de Amdahl.
+\end{project}
+
+%------------------------------------------------------------------------------
+% EDUCATION
+%------------------------------------------------------------------------------
+\section{Educación}
+
+\begin{tcolorbox}[
+    enhanced,
+    colback=lightblue,
+    colframe=lightblue,
+    boxrule=0pt,
+    arc=2mm,
+    left=4mm,
+    right=4mm,
+    top=3mm,
+    bottom=3mm
+]
+    {\large\bfseries\color{navy}
+    Ingeniería en Ciencias de la Computación}
+
+    \vspace{2pt}
+
+    {\normalsize Universidad Politécnica Salesiana}
+
+    {\small\color{muted}
+    Cuenca, Ecuador
+    \hfill
+    \textbf{Egreso: 2026}}
+\end{tcolorbox}
+
+%------------------------------------------------------------------------------
+% CERTIFICADOS Y RECONOCIMIENTOS
+%------------------------------------------------------------------------------
+\section{Certificaciones y Reconocimientos}
+
+\begin{tcolorbox}[
+    enhanced,
+    colback=lightblue,
+    colframe=lightblue,
+    boxrule=0pt,
+    arc=2mm,
+    left=4mm,
+    right=4mm,
+    top=3mm,
+    bottom=3mm
+]
+    {\large\bfseries\color{navy}
+    Build, Train, and Deploy ML Models with Keras on Google Cloud}
+
+    \vspace{2pt}
+
+    {\normalsize Google Cloud / Google Skills Boost}
+
+    {\small\color{muted}
+    Credencial oficial
+    \hfill
+    \textbf{Diciembre 2025}}
+
+    \vspace{3pt}
+    \footnotesize
+    Certificación en diseño, entrenamiento y despliegue de modelos de Machine Learning utilizando Keras sobre infraestructura cloud de Google Cloud.
+\end{tcolorbox}
+
+\vspace{4pt}
+
+\begin{tcolorbox}[
+    enhanced,
+    colback=lightblue,
+    colframe=lightblue,
+    boxrule=0pt,
+    arc=2mm,
+    left=4mm,
+    right=4mm,
+    top=3mm,
+    bottom=3mm
+]
+    {\large\bfseries\color{navy}
+    Certificate of Recognition: Graduation Project in English}
+
+    \vspace{2pt}
+
+    {\normalsize Universidad Politécnica Salesiana (Computer Science Major)}
+
+    {\small\color{muted}
+    Cuenca, Ecuador
+    \hfill
+    \textbf{Agosto 2026}}
+
+    \vspace{3pt}
+    \footnotesize
+    Reconocimiento al mérito académico por la defensa y presentación del Proyecto de Titulación íntegramente en idioma inglés.
+\end{tcolorbox}
+
+%------------------------------------------------------------------------------
+% FOOTER
+%------------------------------------------------------------------------------
+\vfill
+
+\begin{center}
+    {\footnotesize\color{muted}
+    DAVID UZHCA
+    \quad\textcolor{blue}{\textbullet}\quad
+    SOFTWARE ENGINEER
+    \quad\textcolor{blue}{\textbullet}\quad
+    CUENCA, ECUADOR}
+\end{center}
+
+\end{document}
